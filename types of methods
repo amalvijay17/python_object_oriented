@@ -1,0 +1,25 @@
+class Employee:
+    company = 'youtube'
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def email(self):
+        return f'{self.first_name}.{self.last_name}@{Employee.company}.com'
+
+    @classmethod
+    def change_company(cls, newname):
+        cls.company = newname
+
+    @staticmethod
+    def static_method():
+        print("This is Employee Class")
+
+
+emp1 = Employee('arthur', 'morgan')
+emp2 = Employee('sadie', 'adler')
+Employee.company = 'google'  # Changing class variable value
+print(emp1.email())  # Printing email address of employee 1
+print(emp2.email())  # Printing email address of employee 2
+emp1.static_method() # Static method
