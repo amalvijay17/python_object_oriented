@@ -1,0 +1,22 @@
+class Employee:
+    company = 'youtube'
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def email(self):
+        return f'{self.first_name}.{self.last_name}@{Employee.company}.com'
+
+    def get_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+    def set_name(self, value1, value2):
+        self.first_name = value1
+        self.last_name = value2
+
+
+emp1 = Employee('arthur', 'morgan')
+emp2 = Employee('sadie', 'adler')
+emp1.set_name('john','marston') # Changing value to john marston instead of arthur morgan
+print(emp1.email()) # Printing email
