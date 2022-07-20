@@ -1,0 +1,10 @@
+class Laptop:
+
+    def config(self):
+        print("Processor =","i5","RAM =","16GB","HDD =","1TB")
+    
+
+
+lap1 = Laptop()
+Laptop.config(lap1)  # Method 1
+lap1.config()  # Method 2
