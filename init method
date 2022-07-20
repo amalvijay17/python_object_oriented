@@ -1,0 +1,14 @@
+class Laptop:
+    def __init__(self, cpu, ram):
+        self.cpu = cpu
+        self.ram = ram
+
+    def config(self):
+        print("Config is", self.cpu, self.ram)
+
+
+lap1 = Laptop('i5', 8)
+lap2 = Laptop('Ryzen5', 16)
+
+lap1.config()
+lap2.config()
