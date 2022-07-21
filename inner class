@@ -1,0 +1,33 @@
+class Student:  # Outer Class
+    def __init__(self, name, rollno):
+        self.name = name
+        self.rollno = rollno
+        self.lap = self.Laptop()  # Object is created inside the outer class
+
+    def show(self):
+        print('Name:', self.name, 'Rollno:', self.rollno)
+        self.lap.show()
+
+    class Laptop:  # Inner Class
+        def __init__(self):
+            self.brand = 'HP'
+            self.cpu = 'i5'
+            self.ram = '8GB'
+
+        def show(self):
+            print('Brand:', self.brand, 'CPU:', self.cpu, 'RAM:', self.ram)
+
+
+s1 = Student('Amal', '5')
+s2 = Student('Prince', '6')
+# print(s1.name, s1.rollno)  # Printing outer class variables
+# print(s1.lap.brand, s1.lap.cpu, s1.lap.ram)  # Printing inner class variables
+# We need to create object of Laptop class, using the outer class object
+lap1 = s1.Laptop()
+lap2 = s2.Laptop()
+# s1.show() #  Prints show() of outer class
+# s1.Laptop.show(lap1)  #  Prints show() of inner class
+# s2.show() #  Prints show() of outer class
+# s2.Laptop.show(lap2) #  Prints show() of inner class
+s1.show()
+s2.show()
