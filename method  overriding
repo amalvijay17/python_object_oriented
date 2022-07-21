@@ -1,0 +1,15 @@
+class A:
+    def show(self):
+        print("In A Show")
+
+
+class B(A):
+    def show(self):
+        print("In B Show")  # B Show overrides A Show
+
+
+a1 = B()
+a1.show()
+
+#  If class B is given pass then it will print "In A Show"
+#  Now B has its own Show!
