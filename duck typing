@@ -1,0 +1,25 @@
+class Pycharm:
+    def execute(self):
+        print("Compiling")
+        print("Running")
+
+
+class MyEditor:
+    def execute(self):
+        print("Spell Check")
+        print("Convention Check")
+        print("Compiling")
+        print("Running")
+
+
+class Laptop:
+    def code(self, ide):
+        ide.execute()
+
+
+# We can replace ide from Pycharm to MyEditor provided we have the method execute
+# It doesn't matter which class object you are passing what matters is that object should have the execute method
+# ide = Pycharm()  # Type of ide is Pycharm
+ide = MyEditor()  # Type of ide is MyEditor Changing ide to MyEditor from Pycharm
+lap1 = Laptop()
+lap1.code(ide)
