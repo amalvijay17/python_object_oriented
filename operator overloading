@@ -1,0 +1,16 @@
+class Student:
+    def __init__(self, m1, m2, m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+        self.total = self.m1 + self.m2 + self.m3
+
+    def __add__(self, other1):
+        total = self.total + other1.total
+        return total
+
+
+std1 = Student(99, 98, 97)
+std2 = Student(96, 95, 94)
+# Operator Overloading: Understanding the Python what to do with the '+' symbol with 2 Objects std1 and std2
+print(std1 + std2)
