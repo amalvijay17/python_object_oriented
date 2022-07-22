@@ -1,0 +1,33 @@
+#  Python default doesn't support Abstract Classes
+
+from abc import ABC, abstractmethod  # To make an abstract class
+
+
+class Computer(ABC):  # Abstract Class
+    @abstractmethod
+    def process(self):
+        pass
+
+
+class Laptop(Computer):  # Subclass of Computer.
+    # Laptop is inheriting Computer which has abstract method.
+    # So we have to define Laptop Class otherwise it will be abstract class
+    def process(self):
+        print("Its running")
+
+
+class Programmer:
+    def work(self, com):
+        print("Solving Bugs")
+        com.process()
+
+
+#  Methods which has only declaration but not a definition is called Abstract Methods
+#  Class which has Abstract Methods are called Abstract Class.
+#  If you make an abstract class we can't make object of it.
+# com = Computer() #  Error
+# com.process() # Error
+com1 = Laptop()
+com1.process()
+prog1 = Programmer()
+prog1.work(com1)
